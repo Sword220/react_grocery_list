@@ -1,21 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GroceryForm from './components/GroceryForm' 
+//import GroceryList from './component/Grocerylist'
 
 class App extends Component {
+  state = { groceries: [] }
+
+  componentDidMount () {
+    //make call to rails server, get items
+  }
+
+  addItem = (name, price) => {
+
+  } 
+
+  updateItem = (id) => {
+
+  }
+
+  deleteItem = (id) => {
+
+  }
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container">
+        <GroceryForm  />
+        {/* <GroceryList
+          updateItem={this.updateItem}
+          deleteItem={this.deleteItem}
+          items={this.state.groceries}
+        /> */}
       </div>
+
     );
   }
 }
 
 export default App;
+
+
